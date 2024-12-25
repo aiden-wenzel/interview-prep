@@ -3,7 +3,7 @@
 #include "graph.hpp"
 
 TEST(simple, get_size){
-	Unweighted_Graph test_graph(4, 10);
+	Unweighted_Graph test_graph(10);
 	ASSERT_EQ(test_graph.get_num_verticies(), 10);
 }
 
