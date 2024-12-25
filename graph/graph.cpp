@@ -4,17 +4,30 @@
 
 #include "graph.hpp"
 
-Unweighted_Graph::Unweighted_Graph(int num_edges, int num_verticies) {
-	int num_matrix_elements = pow(num_edges, 2);
+Unweighted_Graph::Unweighted_Graph(int num_verticies) : num_verticies(num_verticies) {
 	this->num_verticies = num_verticies;
-	int matrix_size = sizeof(num_matrix_elements);
-	this->adjacentcy_matrix = (int*)malloc(matrix_size);
+	for (int i = 0; i < num_verticies; i++) {
+		std::vector<int> empty = {};
+		this->adjacency_list.push_back(empty);
+	}
+	
 }
 
 Unweighted_Graph::~Unweighted_Graph() {
+		
+}
 
+
+void Unweighted_Graph::add_node() {
+
+}
+
+void Unweighted_Graph::set_node_value(int index, Node value) {
+	this->node_values[index] = value;
 }
 
 int Unweighted_Graph::get_num_verticies() {
 	return this->num_verticies;
 }
+
+Node Unweighted_Graph::get_node(int index) {}
