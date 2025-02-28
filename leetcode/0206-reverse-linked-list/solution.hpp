@@ -11,6 +11,7 @@ struct ListNode {
 
 class Solution {
 public:
+	// Itterative Solution
 	ListNode* reverseList(ListNode* head) {		
 		if (head == nullptr) {return nullptr;}
 		ListNode* prev = nullptr; ListNode* tmp;
@@ -24,4 +25,22 @@ public:
 		head->next = prev;
 		return head;
 	}
+
+	// Recursive Soltuion.
+	/*
+	ListNode* reverseList(ListNode* head) {
+		if (head == nullptr) {
+			return nullptr;
+		}
+		if (head->next == nullptr) {
+			return head;
+		}
+
+		ListNode* reversed = reverseList(head->next);
+		head->next->next = head;
+		head->next = nullptr;
+		return reversed;
+
+	}
+	*/
 };
