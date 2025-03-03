@@ -14,4 +14,6 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
+set(CMAKE_CXX_FLAGS "-g3")
+
 add_subdirectory(leetcode)
