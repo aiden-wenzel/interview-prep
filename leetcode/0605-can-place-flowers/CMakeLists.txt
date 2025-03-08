@@ -1,0 +1,3 @@
+add_executable(0605_can_place_flowers unit-test.cpp)
+target_link_libraries(0605_can_place_flowers gtest_main)
+add_test(0605_can_place_flowers 0605_can_place_flowers)
